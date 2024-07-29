@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Odd Even Square Program Output</h1>
+  <ol id="output"></ol>
+
+  <script>
+    let numbers = [];
+    for (let i = 1; i <= 20; i++) {
+      numbers.push(i);
+    }
+
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] % 2 === 0) {
+        numbers[i] = ("Even: " + (numbers[i] * numbers[i]))
+      } else {
+        numbers[i] = ("Odd: " + (numbers[i] * numbers[i]))
+      }
+    }
+
+    const outputList = document.getElementById("output");
+    for (let i = 0; i < numbers.length; i++) {
+      const listItem = document.createElement("li");
+      listItem.textContent = numbers[i];
+      outputList.appendChild(listItem);
+    }
+
+  </script>
+</body>
+
+</html>
